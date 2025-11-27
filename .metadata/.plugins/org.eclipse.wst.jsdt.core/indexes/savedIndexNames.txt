@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+D:\VOTE4U\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4024781049.index
+3602261899.index
+292656255.index
+4082183955.index
+4257089707.index
+2168349955.index
+705846248.index

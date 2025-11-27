@@ -1,0 +1,51 @@
+name: Full Stack CI (Spring Boot + React)
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # ---------- Backend (Spring Boot) ----------
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Build Backend (Maven)
+        run: |
+          cd backvote
+          mvn clean install -DskipTests
+
+      - name: Upload Backend Artifact (JAR)
+        uses: actions/upload-artifact@v4
+        with:
+          name: springboot-jar
+          path: backvote/target/*.jar
+
+      # ---------- Frontend (React) ----------
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install and Build React App
+        run: |
+          cd frontvote
+          npm install
+          npm run build
+
+      - name: Upload Frontend Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: react-build
+          path: frontvote/build
