@@ -1,0 +1,51 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1E90FF;
+  padding: 10px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-left h1 {
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-btn {
+  padding: 6px 12px;
+  background-color: white;
+  color: #1E90FF;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+}
+
+.header-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.logout-btn {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.logout-btn:hover {
+  background-color: #e03e3f;
+}
+
+.welcome-text {
+  font-weight: bold;
+  margin-right: 10px;
+}

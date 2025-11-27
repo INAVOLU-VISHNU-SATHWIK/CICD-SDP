@@ -1,0 +1,134 @@
+/* Top bar */
+.top-bar {
+  background-color: #1E90FF;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.user-section .auth-btn {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  border: 1px solid white;
+  padding: 5px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.user-section .auth-btn:hover {
+  background-color: white;
+  color: #1E90FF;
+}
+
+/* Hero section */
+.hero-section {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background: linear-gradient(to right, #87CEFA, #1E90FF);
+  color: white;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 20px;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  font-size: 18px;
+  border: none;
+  background-color: white;
+  color: #1E90FF;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* About voting */
+.about-voting {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-voting h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Info cards */
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 20px;
+}
+
+.card {
+  background-color: #f0f8ff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Vote4U Section */
+.vote4u-section {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.vote4u-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #1E90FF;
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: underline;
+}
