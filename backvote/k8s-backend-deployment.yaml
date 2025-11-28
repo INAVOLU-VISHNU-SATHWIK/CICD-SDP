@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backvote-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backvote
+  template:
+    metadata:
+      labels:
+        app: backvote
+    spec:
+      containers:
+        - name: backvote-container
+          image: backvote-app
+          imagePullPolicy: Never    # VERY IMPORTANT for local images
+          ports:
+            - containerPort: 18080

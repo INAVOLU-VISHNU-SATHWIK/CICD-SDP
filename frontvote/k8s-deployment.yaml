@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontvote-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontvote
+  template:
+    metadata:
+      labels:
+        app: frontvote
+    spec:
+      containers:
+        - name: frontvote-container
+          image: frontvote-app
+          imagePullPolicy: Never   # VERY IMPORTANT for local Docker Desktop images
+          ports:
+            - containerPort: 3000
